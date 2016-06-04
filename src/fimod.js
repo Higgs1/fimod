@@ -28,7 +28,7 @@ export default class Fimod {
 
   static load() {
     let promise = Promise.resolve();
-    Fimod.mods.map(fimod => {
+    Fimod.mods.sort((a, b) => a.weight - b.weight).map(fimod => {
       promise = promise.then(() => {
         return Fimod.require(fimod.paths).then((modules) => fimod.load(modules));
       });
@@ -51,6 +51,7 @@ export default class Fimod {
       description: "no description",
       enabled: true,
       system: false,
+      weight: 0,
       paths,
       install,
     }, properties);

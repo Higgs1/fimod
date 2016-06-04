@@ -140,6 +140,7 @@ const buttonTemplate = `
 Fimod.define({
   name: "settings",
   system: true,
+  weight: -1,
 },
 ['ui/factory/MenuUi'],
 (MenuUi) => {
