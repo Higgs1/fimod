@@ -1,7 +1,9 @@
 import './settings';
+import './resetgame';
 import './keyboardmovement';
 import './fullscreenmode';
 import './togglebackground';
+import './clearfactories';
 import './exportfactories';
 import './clearcloud';
 import './fixmouse';

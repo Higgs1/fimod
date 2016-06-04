@@ -3,9 +3,9 @@ import Fimod from '../Fimod';
 import { insertStyle } from '../lib/utility';
 
 const START_BACKGROUND_MODE = 'START_BACKGROUND_MODE';
+const STOP_BACKGROUND_MODE = 'STOP_BACKGROUND_MODE';
 const BACKGROUND_MODE_STARTED = 'BACKGROUND_MODE_STARTED';
 const BACKGROUND_MODE_STOPPED = 'BACKGROUND_MODE_STOPPED';
-const FOCUS = 'FOCUS';
 
 const style = `
 #togglebgButton {
@@ -50,12 +50,11 @@ Fimod.define({
 
   Fimod.wrap(RunningInBackgroundInfoUi, 'init', function() {
     this.globalUiEm.addListener(runningNamespace, START_BACKGROUND_MODE, () => {
-      console.log(this);
       this.play.game.getEventManager().invokeEvent(BACKGROUND_MODE_STARTED);
       this.display();
     });
 
-    this.globalUiEm.addListener(runningNamespace, FOCUS, () => {
+    this.globalUiEm.addListener(runningNamespace, STOP_BACKGROUND_MODE, () => {
       this.play.game.getEventManager().invokeEvent(BACKGROUND_MODE_STOPPED);
       this.hide();
     });
@@ -65,7 +64,7 @@ Fimod.define({
     supr(...args);
 
     const blur = () => {
-      this.globalUiEm.invokeEvent(FOCUS);
+      this.globalUiEm.invokeEvent(STOP_BACKGROUND_MODE);
     };
 
     this.backgroundElement.click(blur);

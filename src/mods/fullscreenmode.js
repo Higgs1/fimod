@@ -22,14 +22,14 @@ html {
 
 #gameArea .overviewContainer,
 #gameArea .topContainer {
-  height: 98px;
+  height: 118px;
   overflow-y: hidden;
 }
 
 .mapContainer,
 .mapContainer > div {
   width: calc(100vw - 220px);
-  height: calc(100vh - 100px);
+  height: calc(100vh - 120px);
   margin: 0
 }
 `;
@@ -50,7 +50,7 @@ Fimod.define({
 
     var dimensions = {
       width: 'calc(100vw - 220px)',
-      height: 'calc(100vh - 100px)',
+      height: 'calc(100vh - 120px)',
       margin: 0,
     };
 

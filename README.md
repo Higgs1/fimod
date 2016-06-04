@@ -8,8 +8,8 @@ this is a userscript that adds some tweaks to [Factory Idle]
 1. install a userscript manager
   - [Greasemonkey] - Firefox
   - [Tampermonkey] - Chrome
-1. install the script from latest github release
-  - [fimod releases](https://github.com/sidke/fimod/releases)
+1. install the script from github
+  - [fimod.user.js](https://github.com/sidke/fimod/raw/master/dist/fimod.user.js)
 
 ## configuration
 
@@ -20,6 +20,7 @@ you can toggle each individual setting on fimod's options page in the game
 | Keyboard Movement | Enables use of WASD/arrow keys to navigate the map
 | Fullscreen Mode | Hides ads and enables full-screen map
 | Toggle Background Mode | Disables automatic background mode and adds a manual toggle
+| Clear Factories | Provides a button to remove all buildings from a factory floor
 | Export Factories | Allows exporting factory data to text notation
 | Clear Cloud Saves | Allows the deletion of cloud save slots
 | Fix Mouse | Fixes mouse interaction for Firefox
