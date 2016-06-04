@@ -55,8 +55,8 @@ getScript(SCRIPT_SRC)
       window.onerror = window.oldErrorHandler;
       window.BinaryTest.test();
       if (window.isBrowserSupported()) {
-        const MainInstance = new Main;
-        MainInstance.init(false, () => {});
+        Fimod.MainInstance = new Main;
+        Fimod.MainInstance.init(false, () => {});
       }
     });
   });
