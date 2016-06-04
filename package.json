@@ -1,0 +1,32 @@
+{
+  "name": "fimod",
+  "version": "1.06.0",
+  "description": "factory idle mod",
+  "repository": "https://github.com/sidke/fimod",
+  "scripts": {
+    "build": "browserify src/main.js | uglifyjs | (cat src/header.js && cat) > dist/fimod.user.js",
+    "watch": "watchify -d src/main.js -o \"(cat src/header.js && cat) > dist/fimod.user.js\" -v"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "uglifyify": "^3.0.1",
+    "watchify": "^3.7.0"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ],
+          "sourceMaps": true
+        }
+      ]
+    ]
+  }
+}

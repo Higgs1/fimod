@@ -1,0 +1,21 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["eslint:recommended"],
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "greasemonkey": true
+  },
+  "rules": {
+    "no-console": 0,
+    "comma-dangle": [2, "only-multiline"],
+    "semi": [2, "always"],
+    "no-unused-vars": [2, { "argsIgnorePattern": "^_" }]
+  },
+  "globals": {
+    "Promise": true,
+    "$": true
+  }
+}
