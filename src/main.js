@@ -37,7 +37,7 @@ getScript(SCRIPT_SRC)
         version = template.match(/Version ([\d\.]+)/)[1];
       }
       finally {
-        if (version == Fimod.version) return true;
+        if (version == Fimod.version.substring(0, version.length)) return;
 
         loadingMessage.innerText = "Version mismatch. Possible incompatibility.";
         return new Promise(resolve => setTimeout(resolve, 2000));

@@ -12,7 +12,7 @@ export default class Fimod {
   }
 
   static get version() {
-    return GM_info.script.version.split('.').slice(0, 2).join('.');
+    return GM_info.script.version;
   }
 
 	static require(paths) {

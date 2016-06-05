@@ -67,13 +67,14 @@ const style = `
 }
 
 .toggle__name {
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-weight: bold;
   padding: 0 0 0.4em;
 }
 
 .toggle__description {
   opacity: 0.9;
+  font-size: 0.9em;
 }
 
 .toggle__control {
@@ -120,12 +121,12 @@ const style = `
 }
 `;
 
-const containerTemplate = `
+const containerTemplate = version => `
 <div class="fullscreen-container">
   <div class="fullscreen-background"></div>
   <div id="fimod-settings" class="fullscreen-window">
     <a class="fullscreen-window__close" href="javascript:void(0);" style="float:right; display: block;">Close</a>
-    <b class="fullscreen-window__title">fimod</b>
+    <b class="fullscreen-window__title">fimod <em>${version}</em></b>
     <p>Toggle modules below. Refresh to load changes.</p>
     <div class="options"></div>
   </div>
@@ -159,7 +160,7 @@ Fimod.define({
   insertStyle(style);
 
   function showFimodMenu() {
-    const $container = $(containerTemplate);
+    const $container = $(containerTemplate(Fimod.version));
     const $window = $('.fullscreen-window', $container);
     const $close = $('.fullscreen-window__close', $window);
     const $options = $('.options', $window);
