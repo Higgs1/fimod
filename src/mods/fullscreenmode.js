@@ -7,55 +7,94 @@ html {
   overflow-y: auto;
 }
 
-.main {
-  min-height: auto;
+#main {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+#adArea {
+  display: table-row;
+  height: 100px;
 }
 
 #gameArea {
+  display: table-row;
   width: auto;
   float: none;
 }
 
-.componentsArea {
-  width: 220px;
+#gameArea:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: gray;
+  margin-top: -1px;
 }
 
-#gameArea .overviewContainer,
-#gameArea .topContainer {
-  height: 118px;
-  overflow-y: hidden;
+.factoryBox {
+  height: 100%;
 }
 
-.mapContainer,
-.mapContainer > div {
-  width: calc(100vw - 220px);
-  height: calc(100vh - 120px);
-  margin: 0
+.mapArea {
+  height: 100%;
+  width: 100%;
+}
+
+#gameArea .mapContainer {
+  height: 100%;
 }
 `;
 
 Fimod.define({
   name: "fullscreenmode",
   label: "Fullscreen Mode",
-  description: "Hides ads and enables full-screen map",
+  description: "Enables full-screen map",
 },
-['game/Game', 'ui/factory/MapUi'],
-(Game, MapUi) => {
+['game/Game', 'ui/MainUi', 'ui/factory/MapUi'],
+(Game, MainUi, MapUi) => {
   insertStyle(style);
 
-  Game.prototype.getIsPremium = () => true;
+  Fimod.wrap(MainUi, 'display', function(supr, ...args) {
+    supr(...args);
+
+    const $main = $('#main');
+    const $adArea = $('<div id="adArea" class="ad_box"></div>');
+    const $ads = $('.adsbygoogle').parent();
+    $adArea.append($ads);
+    $ads.last().remove();
+    $('> br', $main).remove();
+    $main.prepend($adArea).removeClass('main mainWithAdd');
+  });
 
   Fimod.wrap(MapUi, 'display', function(supr, ...args) {
     supr(...args);
 
-    var dimensions = {
-      width: 'calc(100vw - 220px)',
-      height: 'calc(100vh - 120px)',
-      margin: 0,
+    this._resize = () => {
+      const reset = {
+        width: 1,
+        height: 1,
+      };
+
+      this.container.css(reset);
+      this.overlay.css(reset);
+
+      const size = {
+        width: this.container.parent().width(),
+        height: this.container.parent().height(),
+      };
+
+      this.container.css(size);
+      this.overlay.css(size);
     };
 
-    this.overlay.css(dimensions);
-    this.overlay.parent().css(dimensions);
-    this.element.css({top: 0, left: 0});
+    this._resize();
+    window.addEventListener("resize", this._resize);
+  });
+
+  Fimod.wrap(MapUi, 'destroy', function(supr) {
+    supr();
+    window.removeEventListener("resize", this._resize);
   });
 });

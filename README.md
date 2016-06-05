@@ -18,7 +18,7 @@ you can toggle each individual setting on fimod's options page in the game
 | setting | description |
 | --- | ---
 | Keyboard Movement | Enables use of WASD/arrow keys to navigate the map
-| Fullscreen Mode | Hides ads and enables full-screen map
+| Fullscreen Mode | Enables full-screen map
 | Toggle Background Mode | Disables automatic background mode and adds a manual toggle
 | Clear Factories | Provides a button to remove all buildings from a factory floor
 | Export Factories | Allows exporting factory data to text notation
