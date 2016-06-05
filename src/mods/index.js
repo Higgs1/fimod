@@ -4,6 +4,7 @@ import './keyboardmovement';
 import './fullscreenmode';
 import './togglebackground';
 import './clearfactories';
+import './showefficiency';
 import './exportfactories';
 import './clearcloud';
 import './fixmouse';

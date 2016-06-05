@@ -21,6 +21,7 @@ you can toggle each individual setting on fimod's options page in the game
 | Fullscreen Mode | Enables full-screen map
 | Toggle Background Mode | Disables automatic background mode and adds a manual toggle
 | Clear Factories | Provides a button to remove all buildings from a factory floor
+| Show Building Efficiency | Puts an colored icon on each building to show its efficiency
 | Export Factories | Allows exporting factory data to text notation
 | Clear Cloud Saves | Allows the deletion of cloud save slots
 | Fix Mouse | Fixes mouse interaction for Firefox
