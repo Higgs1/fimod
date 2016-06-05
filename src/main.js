@@ -10,6 +10,7 @@ preventScript(SCRIPT_SRC);
 
 getScript(SCRIPT_SRC)
   .then(source => {
+    if (window.top !== window.self) document.body.classList.add('iframe');
     loadingMessage = document.querySelector('#loadingMessage');
     loadingMessage.innerText = "Loading Fimod...";
 

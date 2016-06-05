@@ -4,12 +4,16 @@ import { insertStyle } from '../lib/utility';
 
 const style = `
 .controlsBox {
-  width: auto;
+  width: 17em;
   float: right;
 }
 
+.controlsBox .clearPackagesButton {
+  width: 7em;
+}
+
 .controlsBox .clearFactoryButton {
-  width: 110px;
+  width: 7em;
   border: 1px solid darkred;
 }
 `;
