@@ -6,7 +6,7 @@ const FACTORY_COMPONENTS_CHANGED = 'FACTORY_COMPONENTS_CHANGED';
 Fimod.define({
   name: "showefficiency",
   label: "Show Building Efficiency",
-  description: "Puts an colored icon on each building to show its efficiency.",
+  description: "Puts an colored icon on each building to show its efficiency",
 },
 ['ui/factory/MapUi'],
 (MapUi) => {
@@ -92,17 +92,18 @@ Fimod.define({
     }
 
     drawEfficiency(context, component, efficiency) {
-      console.log('updating a component');
       const tile = component.getMainTile();
       const meta = component.getMeta();
 
       const size = this.tileSize;
-      const iconSize = (size / 2);
-      const x = tile.getX() * size;
-      const y = (tile.getY() + meta.height) * size - iconSize;
+      const iconSize = (size / 6);
+      const x = tile.getX() * size + (iconSize * 1.5);
+      const y = (tile.getY() + meta.height) * size - (iconSize * 1.5);
 
       context.fillStyle = colors[((colors.length - 1) * (efficiency / 100)).toFixed()];
-      context.fillRect(x, y, iconSize, iconSize);
+      context.beginPath();
+      context.arc(x, y, iconSize, 0, 2 * Math.PI);
+      context.fill();
     }
   }
 

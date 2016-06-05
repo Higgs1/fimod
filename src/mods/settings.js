@@ -7,6 +7,10 @@ const style = `
   background: rgba(255, 128, 255, 0.2);
 }
 
+#fimodButton:hover {
+  background: rgba(255, 128, 255, 0.5);
+}
+
 .fullscreen-container {
   position: absolute;
   top: 0;
