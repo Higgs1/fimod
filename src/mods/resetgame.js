@@ -17,7 +17,7 @@ Fimod.define({
         .setOkTitle("Nooooo!!!")
         .setCancelCallback(() => {
           Fimod.MainInstance.destroy();
-          Fimod.MainInstance.init(false);
+          Fimod.MainInstance.init(true);
           this.destroy();
         }).display();
     });
