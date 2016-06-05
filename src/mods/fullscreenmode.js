@@ -71,10 +71,13 @@ Fimod.define({
     const $main = $('#main');
     const $adArea = $('<div id="adArea" class="ad_box"></div>');
     const $ads = $('.adsbygoogle').parent();
-    $adArea.append($ads);
-    $ads.last().remove();
+    if ($ads.length) {
+      $adArea.append($ads);
+      $ads.last().remove();
+      $main.prepend($adArea);
+    }
     $('> br', $main).remove();
-    $main.prepend($adArea).removeClass('main mainWithAdd');
+    $main.removeClass('main mainWithAdd');
   });
 
   Fimod.wrap(MapUi, 'display', function(supr, ...args) {
