@@ -48,7 +48,6 @@ Fimod.define({
         })
         .map(action => {
           if (action.canSell()) action.sell();
-          console.log(action.canSell());
         });
     };
 

@@ -17,8 +17,8 @@ works on both the [Factory Idle] site and [Kongregate]
 
 you can toggle each individual setting on fimod's options page in the game
 
-##### keyboard movement
-allows the use of WASD/arrow keys to navigate the map
+##### improved map navigation
+improves dragging, enables map zooming, and allows keyboard movement. use the mouse wheel for zooming, and arrow/wasd keys for keyboard. also fixes the firefox mouse dragging issue
 
 ##### fullscreen mode
 restyles page content to fit the map in the rest of the remaining space while retaining ads for non-premium users
@@ -59,9 +59,6 @@ adds a button to generate a text representation of a factory
 adds a button to remove save slots from the cloud
 
 ![clear save](http://i.imgur.com/RwmBHiV.png)
-
-##### fix mouse
-allows dragging right click to quickly sell buildings in Firefox
 
 ## support the creator
 
