@@ -21,7 +21,7 @@ you can toggle each individual setting on fimod's options page in the game
 improves dragging, enables map zooming, and allows keyboard movement. use the mouse wheel for zooming, and arrow/wasd keys for keyboard. also fixes the firefox mouse dragging issue
 
 ##### fullscreen mode
-restyles page content to fit the map in the rest of the remaining space while retaining ads for non-premium users
+restyles page content to fit the map in the rest of the remaining space while retaining ads for non-premium users. does not expand the map on kongregate
 
 ![fullscreen mode example](http://i.imgur.com/6c9l0dL.png)
 
