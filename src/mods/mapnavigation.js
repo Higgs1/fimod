@@ -217,6 +217,12 @@ Fimod.define({
 
     container.addEventListener("mousewheel", zoom, false);
     container.addEventListener("DOMMouseScroll", zoom, false);
+    container.addEventListener("mousedown", event => {
+      if (!(event.buttons & 4)) return;
+      event.preventDefault();
+      level = 14;
+      zoom(event);
+    }, false);
   };
 
   Fimod.wrap(MouseLayer, 'display', function(supr, ...args) {
