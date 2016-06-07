@@ -25,6 +25,11 @@ restyles page content to fit the map in the rest of the remaining space while re
 
 ![fullscreen mode example](http://i.imgur.com/6c9l0dL.png)
 
+##### move overview
+moves the overview from the top left into the left panel, and stretches the top bar to the full width. this fixes issues with cramped space when playing on kongregate
+
+![move overview example](http://i.imgur.com/VlJqGsE.png)
+
 ##### toggle background mode
 prevents the game from automatically entering background mode, and provides a button to manually turn background mode on
 
