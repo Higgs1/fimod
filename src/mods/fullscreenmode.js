@@ -42,10 +42,6 @@ html {
   height: 110px;
 }
 
-#gameArea .bonusTicks {
-  padding-top: 0.5em;
-}
-
 .mapArea {
   height: 100%;
   width: 100%;

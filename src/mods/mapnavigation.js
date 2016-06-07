@@ -281,6 +281,7 @@ Fimod.define({
       const direction = directions[event.keyCode];
       if (moving.indexOf(direction) != -1) return;
       moving.push(direction);
+      event.preventDefault();
       if (moveTimer === undefined) moveTimer = setInterval(applyMovement, delay);
 
       const stopMovement = (event) => {

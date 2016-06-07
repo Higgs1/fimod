@@ -3,14 +3,6 @@ import Fimod from '../fimod';
 import { insertStyle } from '../lib/utility';
 
 const style = `
-.iframe .topArea {
-  font-size: 0.8em;
-}
-
-.iframe #fimod-settings {
-  font-size: 0.8em;
-}
-
 #fimodButton {
   background: rgba(255, 128, 255, 0.2);
 }
@@ -155,8 +147,8 @@ Fimod.define({
   system: true,
   weight: -1,
 },
-['ui/factory/MenuUi'],
-(MenuUi) => {
+['ui/factory/MenuUi', 'ui/FactoryUi'],
+(MenuUi, FactoryUi) => {
   insertStyle(style);
 
   function showFimodMenu() {
