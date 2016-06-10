@@ -50,6 +50,10 @@ html {
 #gameArea .mapContainer {
   height: 100%;
 }
+
+#gameArea .controlsBox {
+  float: right;
+}
 `;
 
 Fimod.define({
@@ -57,8 +61,8 @@ Fimod.define({
   label: "Fullscreen Mode",
   description: "Enables full-screen map",
 },
-['game/Game', 'ui/MainUi', 'ui/factory/MapUi'],
-(Game, MainUi, MapUi) => {
+['game/Game', 'ui/MainUi', 'ui/FactoryUi', 'ui/factory/MapUi'],
+(Game, MainUi, FactoryUi, MapUi) => {
   insertStyle(style);
 
   Fimod.wrap(MainUi, 'display', function(supr, ...args) {
@@ -104,5 +108,15 @@ Fimod.define({
   Fimod.wrap(MapUi, 'destroy', function(supr) {
     supr();
     window.removeEventListener("resize", this._resize);
+  });
+
+  Fimod.wrap(FactoryUi, 'display', function(supr, ...args) {
+    supr(...args);
+
+    const $container = this.container;
+    const $controlsContainer = $('.controlsContainer', $container);
+    const $infoContainer = $('.infoContainer', $container);
+
+    $controlsContainer.after($infoContainer);
   });
 });

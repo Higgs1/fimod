@@ -48,10 +48,5 @@ Fimod.define({
     $overviewArea.remove();
     $leftPanel.prepend($newOverviewArea);
     $topArea.attr({colspan: 2});
-
-    const $controlsContainer = $('.controlsContainer', $container);
-    const $infoContainer = $('.infoContainer', $container);
-
-    $controlsContainer.after($infoContainer);
   });
 });

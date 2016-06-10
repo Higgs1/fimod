@@ -5,7 +5,6 @@ import { insertStyle } from '../lib/utility';
 const style = `
 .controlsBox {
   width: 17em;
-  float: right;
 }
 
 .controlsBox .clearPackagesButton {
