@@ -14,4 +14,8 @@ if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
     });
   });
   observer.observe(document.documentElement, {childList: true, subtree: true});
+
+  window._disconnectBeforeScriptExecute = function() {
+    observer.disconnect();
+  };
 }

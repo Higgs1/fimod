@@ -4,7 +4,7 @@
 // @namespace   https://github.com/sidke/fimod
 // @description factory idle mod
 // @include     http://factoryidle.com/*
-// @version     1.06.11
+// @version     1.06.12
 // @grant       none
 // @run-at      document-start
 // ==/UserScript==

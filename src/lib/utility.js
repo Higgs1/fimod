@@ -1,9 +1,16 @@
 export function preventScript(src) {
-  document.addEventListener('beforescriptexecute', (event) => {
-    if (event.target.src == src) {
-      event.preventDefault();
-    }
-  }, true);
+  return new Promise(resolve => {
+    const handleScript = (event) => {
+      if (event.target.src == src) {
+        event.preventDefault();
+        document.removeEventListener('beforescriptexecute', handleScript);
+        if (window._disconnectBeforeScriptExecute) window._disconnectBeforeScriptExecute();
+        resolve();
+      }
+    };
+
+    document.addEventListener('beforescriptexecute', handleScript, true);
+  });
 }
 
 export function getScript(src) {

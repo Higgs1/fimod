@@ -1,6 +1,7 @@
 import Fimod from './fimod';
 import { preventScript, getScript, insertScript } from './lib/utility';
 import './lib/beforescriptexecute-polyfill.js';
+import './lib/requestFullscreen-polyfill.js';
 import './mods';
 
 const SCRIPT_SRC = 'http://factoryidle.com/app.js';

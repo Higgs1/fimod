@@ -14,7 +14,7 @@ const style = `
 `;
 
 const buttonTemplate = `
-<a id="togglebgButton" href="javascript:void(0);">Background Mode</a>
+<a id="togglebgButton" href="javascript:void(0);">Background</a>
 `;
 
 Fimod.define({

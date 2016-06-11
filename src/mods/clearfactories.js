@@ -4,15 +4,15 @@ import { insertStyle } from '../lib/utility';
 
 const style = `
 .controlsBox {
-  width: 17em;
+  width: 210px;
 }
 
 .controlsBox .clearPackagesButton {
-  width: 7em;
+  width: 90px;
 }
 
 .controlsBox .clearFactoryButton {
-  width: 7em;
+  width: 90px;
   border: 1px solid darkred;
 }
 `;
