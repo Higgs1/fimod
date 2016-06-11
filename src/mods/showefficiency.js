@@ -3,6 +3,12 @@ import Fimod from '../Fimod';
 const FACTORY_TICK = 'FACTORY_TICK';
 const FACTORY_COMPONENTS_CHANGED = 'FACTORY_COMPONENTS_CHANGED';
 
+const REVERSE_EFFICIENCIES = [
+  'sorterVertical',
+  'sorterHorizontal',
+  'garbageCollector',
+];
+
 Fimod.define({
   name: "showefficiency",
   label: "Show Building Efficiency",
@@ -94,6 +100,9 @@ Fimod.define({
     drawEfficiency(context, component, efficiency) {
       const tile = component.getMainTile();
       const meta = component.getMeta();
+
+      const reverse = REVERSE_EFFICIENCIES.indexOf(meta.id) !== -1;
+      if (reverse) efficiency = 100 - efficiency;
 
       const size = this.tileSize;
       const iconSize = (size / 6);

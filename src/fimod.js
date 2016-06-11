@@ -15,7 +15,7 @@ export default class Fimod {
     return GM_info.script.version;
   }
 
-	static require(paths) {
+  static require(paths) {
     return new Promise(resolve => {
       window.require(paths, (...modules) => resolve(modules));
     });
