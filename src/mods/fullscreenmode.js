@@ -84,13 +84,13 @@ html, body, #main, #gameArea {
   padding: 10px 0;
 }
 
-.componentInfo {
-  max-width: 500px;
-  width: auto !important;
+.infoContainer {
+  position: relative;
 }
 
 .componentControls {
-  width: 150px;
+  position: absolute;
+  right: 0;
 }
 
 #toggleFullscreenButton {
