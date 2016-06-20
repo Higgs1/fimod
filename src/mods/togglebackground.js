@@ -1,4 +1,4 @@
-import Fimod from '../Fimod';
+import Fimod from '../fimod';
 
 import { insertStyle } from '../lib/utility';
 

@@ -1,3 +1,5 @@
+This version is the same as sidke's version, except the "Main" (requirejs) instance is exposed globally as "MainInstance" for maximum cheating- er... debugging! Sure...
+
 # fimod
 factory idle mod
 

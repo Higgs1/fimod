@@ -59,7 +59,8 @@ getScript(SCRIPT_SRC)
       if (window.isBrowserSupported()) {
         Fimod.MainInstance = new Main;
         Fimod.MainInstance.init(false, () => {});
-        window.Fidmod = Fimod
+        window.Fidmod = Fimod;
+        window.MainInstace = Fimod.MainInstance;
       }
     });
   });

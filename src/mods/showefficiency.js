@@ -1,4 +1,4 @@
-import Fimod from '../Fimod';
+import Fimod from '../fimod';
 
 const FACTORY_TICK = 'FACTORY_TICK';
 const FACTORY_COMPONENTS_CHANGED = 'FACTORY_COMPONENTS_CHANGED';
