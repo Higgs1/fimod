@@ -60,7 +60,7 @@ getScript(SCRIPT_SRC)
         Fimod.MainInstance = new Main;
         Fimod.MainInstance.init(false, () => {});
         window.Fidmod = Fimod;
-        window.MainInstace = Fimod.MainInstance;
+        window.MainInstance = Fimod.MainInstance;
       }
     });
   });
